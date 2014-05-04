@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>My Angular Demo</title>
+  <link rel="stylesheet" href="css/bootstrap.css">
+  <link rel="stylesheet" href="css/nv.d3.css">
+  <link rel="stylesheet" href="css/jqueryui.css">
+  <link rel="stylesheet" href="css/myclass.css">
+  <link rel="stylesheet" href="css/mynvd3.css">
+  <link rel="stylesheet" href="css/mydangle.css">
+  <link rel="stylesheet" href="css/mytreeview.css">
+  <link rel="stylesheet" href="css/slider.css">
+  <link rel="stylesheet" href="css/rating.css">
+  <link rel="stylesheet" href="css/app.css">
+  <link rel="stylesheet" href="css/nprogress.css">
+  <link rel="stylesheet" href="css/progressbar_style.css">
+  <link rel="stylesheet" href="css/imgloader.css">
+  <script src="lib/jquery-1.8.3.min.js"></script>
+  <script src="lib/jquery-1.8.3.ui.min.js"></script>
+  <script src="lib/jquery.slider.js"></script>
+  <script src="lib/map.js"></script>
+  <script src="lib/scriptloader.js"></script>
+  <script src="lib/d3.min.js"></script>
+  <script src="lib/nvd3/nv.d3.js"></script>
+  <script src="lib/nvd3/utils.js"></script>
+  <script src="lib/nvd3/tooltip.js"></script>
+  <script src="lib/nvd3/models/legend.js"></script>
+  <script src="lib/nvd3/models/axis.js"></script>
+  <script src="lib/nvd3/models/multiBar.js"></script>
+  <script src="lib/nvd3/models/multiBarChart.js"></script>
+  <script src="lib/angular/angular.js"></script>
+  <script src="lib/angular/angular-resource.js"></script>
+  <script src="lib/angular/angular-ui-router.js"></script>
+  <!--script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.0.5/angular.js"></script-->
+  <script src="lib/angular/ui-bootstrap-tpls-0.5.0.js"></script>
+  <script src="lib/angular/angular-ui-router.js"></script>
+  <!--link href="http://netdna.bootstrapcdn.com/twitter-bootstrap/2.3.1/css/bootstrap-combined.min.css" rel="stylesheet"-->
+  <script src="lib/dangle.min.js"></script>
+  <script src="lib/nprogress.js"></script>
+  <script src="js/my-treeview.js"></script>
+  <script src="js/app.js"></script>
+  <script src="js/controllers.js"></script>
+  <script src="js/filters.js"></script>
+  <script src="js/services.js"></script>
+  <script src="js/directives.js"></script>
+  <script src="js/directive-d3.js"></script>
+   <!--script src="js/angularstrap.js"></script>
+  <script src="js/compile.js"></script-->
+  <script type="text/javascript">
+          
+  </script>
+</head>
+<body>
+  <div ng-app="angulardemo">
+	  <div id='myview' ng-view></div>
+	  <!--iframe width="560" height="315" ng-show="iframeLink" ng-src="{{iframeLink}}" frameborder="0" allowfullscreen></iframe-->
+	  <div id='uiroute' ng-show="uishow" class="well" ui-view></div>  
+  </div>
+</body>
+</html>

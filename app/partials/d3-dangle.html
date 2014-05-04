@@ -1,0 +1,86 @@
+
+        
+<div class="container-fluid" ng-controller="D3DemoCtrl">
+	<div class="row-fluid">
+		<div>
+			<h4>dangle.js Examples</h4>
+			<p>Tested on the latest version of Chrome, Safari, and Firefox. The examples will also adapt to  mobile devices 
+			   (tested on Nexus 7 (tablet) and HTC One X (phone), both running Chrome. This runs completely in the browser 
+			   so just view source to see how it works. Graphs are interactive and animated. Clicking on any graph will modify
+			   the data, causing everything to update.<p>
+
+			   <p>dangle is a set of <a href="http://angularjs.org/">AngularJS</a> directives that provide common <a href="http://d3js.org/">D3</a> visualizations for <a href="http://www.elasticsearch.org/">elasticsearch</a>.</p>
+
+			   <a href="/dangle">Documentation</a>
+
+		<hr>
+
+		</div>
+		<div class="span10">
+			<div class="row-fluid">
+				<div><strong>Date Histogram Example</strong></div>
+				<div class="span10" style="height:200px">
+					<fs:date-histo
+						duration="750"
+						interval="month"
+						on-click="filterSearchA"
+						bind="results.facets.Times"
+					/>
+				</div>
+			</div>
+
+			<hr>
+
+			<div class="row-fluid">
+				<div><strong>Bar Chart Example</strong></div>
+				<div class="span10" style="height:200px">
+					<fs:bar
+						width="900"
+						height="175"
+						duration="750"
+						on-click="filterSearchA"
+						bind="results.facets.Product"
+					/>
+				</div>
+			</div>
+
+			<hr>
+
+			<div class="row-fluid">
+				<div><strong>Pie &amp; Donut Chart Example</strong></div>
+				<div class="span5" style="height:350px">
+					<fs:donut 
+						outer-radius="200"
+						inner-radius="75"
+						duration="750"
+						on-click="filterSearchA" 
+						bind="results.facets.Product" />
+				</div>
+
+				<div class="span2" style="height:200px;">
+					<fs:pie 
+						outer-radius="100"
+						on-click="filterSearchA" 
+						bind="results.facets.Sex" />
+				</div>
+			</div>
+
+			<hr>
+
+			<div class="row-fluid">
+				<div><strong>Area Chart Example</strong></div>
+				<div class="span10" style="height:200px">
+					<fs:area 
+						bind="results.facets.Times"
+						duration="750"
+						interpolate="true"
+						on-click="filterSearchA" />
+				</div>
+			</div>
+		</div>
+	</div>
+
+</div>
+
+        
+

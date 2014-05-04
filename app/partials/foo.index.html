@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en">
+
+<body ng-app="fooApp">
+
+<div ng-view></div>
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.0.6/angular.min.js"></script>
+<script>
+  var app = angular.module('fooApp', ['fooApp.controllers']);
+
+    // Configure the app
+    app.config(['$routeProvider', function ($routeProvider) {
+        $routeProvider.when('/foo1', {template: '<h1>Foo</h1><h2>foo1</h2>', controller: 'MyCtrl1'});
+        $routeProvider.when('/foo2', {template: '<h1>Foo</h1><h2>foo2</h2>', controller: 'MyCtrl2'});
+    }]);
+
+    angular.module('fooApp.controllers', []).
+            controller('MyCtrl1', [function () {
+                console.log("fooApp.MyCtrl1 invoked.");
+            }])
+            .controller('MyCtrl2', [function () {
+                console.log("fooApp.MyCtrl2 invoked.");
+            }]);
+</script>
+</body>
+</html>

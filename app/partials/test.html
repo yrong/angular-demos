@@ -1,0 +1,21 @@
+<!doctype html>
+<html ng-app>
+ <head>
+
+    <script src="http://code.angularjs.org/1.2.0rc1/angular.min.js"></script>
+	<script>
+function GreetingCtrl($scope){
+  $scope.firstName = 'Yrong';
+}
+</script>
+  </head>
+  <body>
+   <div ng-controller="GreetingCtrl">
+   <input type="text" ng-model="firstName">
+	<p>Hello {{firstName}}!</p>
+   </div>
+
+	 
+	
+  </body>
+</html>

@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en">
+
+<body ng-app="barApp">
+
+<div ng-view></div>
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.0.6/angular.min.js"></script>
+<script>
+  var app = angular.module('barApp', ['barApp.controllers']);
+
+    // Configure the app
+    app.config(['$routeProvider', function ($routeProvider) {
+        $routeProvider.when('/bar1', {template: '<h1>Bar</h1><h2>bar1</h2>', controller: 'MyCtrl1'});
+        $routeProvider.when('/bar2', {template: '<h1>Bar</h1><h2>bar2</h2>', controller: 'MyCtrl2'});
+    }]);
+
+    angular.module('barApp.controllers', []).
+            controller('MyCtrl1', [function () {
+                console.log("barApp.MyCtrl1 invoked.");
+            }])
+            .controller('MyCtrl2', [function () {
+                console.log("barApp.MyCtrl2 invoked.");
+            }]);
+</script>
+</body>
+</html>

@@ -1,0 +1,25 @@
+﻿
+<div ng-controller="MyAutoCompleteCtrl">
+	<div class="ui-widget">
+		<label for="tags">Tags(变量): </label>
+		<input id="tags" ng-model="val" green-autocomplete="" remote="false" ng-disabled="val=='Asp'" source="getsource"  min-length="0" position-my="right top" position-at= "right bottom"  start-with="false">
+	</div>
+	<br/>
+    {{val}}
+    
+    <div class="ui-widget">
+    <label for="tags">Tags(函数): </label>
+    <input i ng-model="val_Array" green-autocomplete=""  source="availableTags" max-items="5" min-length="2"  start-with="true" ng-change="change();">
+	</div>
+	{{val_Array}}
+	<br/>
+	<br/>
+  http://XX/XX.php?term={0}
+    <div class="ui-widget">
+    <label for="tags">Tags(url): </label>
+    <input i ng-model="val_url" green-autocomplete=""  source="url" remote="true" max-items="3" >
+</div>
+<br/>
+    {{val_url}}
+</div>
+

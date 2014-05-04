@@ -1,0 +1,11 @@
+<script type="text/ng-template" id="/tpl.html">
+  <div>
+    <!-- note, templates must have exactly one root element -->
+    <h1>{{ title }}</h1>
+    <div class="content" ng-transclude></div>
+  </div>
+</script>
+
+<thing title="My title of the template">
+  <p>My Some transcluded content</p>
+</thing>

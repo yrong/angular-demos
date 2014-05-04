@@ -1,0 +1,10 @@
+<form name="signForm" ng-controller="FormController" novalidate>
+	<div ng-repeat="f in fields">
+		<ng-form name="signFormIn">
+			<input type="text" name="theInput" ng-required="f.isRequired"/>				
+			<div ng-show="signFormIn.theInput.$dirty && signFormIn.theInput.$invalid">
+				<span class="error" ng-show="signFormIn.theInput.$error.required">The field is required.</span>
+			</div>
+		</ng-form>
+	</div>
+</form>

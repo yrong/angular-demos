@@ -1,0 +1,34 @@
+<div ng-init="names = ['Sam', 'Harry', 'Sally']">
+        <h1>Fun with Fields and ngModel</h1>
+        <p>names: {{names}}</p>
+        <h3>Binding to each element directly:</h3>
+        <div ng-repeat="name in names">
+            Value: {{name}}
+            <input ng-model="name">                         
+        </div>
+        <p class="muted">The binding does not appear to be working: the value in the model is not changed.</p>
+        <h3>Indexing into the array:</h3>
+        <div ng-repeat="name in names">
+            Value: {{names[$index]}}
+            <input ng-model="names[$index]">                         
+        </div>
+        <p class="muted">Type one character, and the input field loses focus. However, the binding appears to be working correctly.</p>
+</div>
+
+<div ng-init="models = [{name:'Sam'},{name:'Harry'},{name:'Sally'}];names1 = ['Sam1', 'Harry1', 'Sally1']">
+        <h1>Fun with Fields and ngModel</h1>
+        <p>names: {{models}}</p>
+        <h3>Binding to each element directly:</h3>
+        <div ng-repeat="model in models">
+            Value: {{model.name}}
+            <input ng-model="model.name">                         
+        </div>
+        <p class="muted">The binding does not appear to be working: the value in the model is not changed.</p>
+        <h3>Indexing into the array:</h3>
+        <div ng-repeat="name in names1">
+            Value: {{names1[$index]}}
+            <input ng-model="names1[$index]">
+			<p>names: {{names1}}</p>
+        </div>
+        <p class="muted">Type one character, and the input field loses focus. However, the binding appears to be working correctly.</p>
+</div>

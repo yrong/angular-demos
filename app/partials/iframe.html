@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+
+<body ng-app="plunker" ng-controller="MainCtrl">
+
+<!-- define foo -->
+
+<div>
+    <ul class="menu">
+        <li><a href="#" ng-click="fooRoute='#/foo1'">foo1</a></li>
+        <li><a href="#" ng-click="fooRoute='#/foo2'">foo2</a></li>
+    </ul>
+    <iframe seamless="true" ng-src="foo.index.html{{fooRoute}}"></iframe>
+</div>
+
+<div>
+    <ul class="menu">
+        <li><a href="#" ng-click="barRoute='#/bar1'">bar1</a></li>
+        <li><a href="#" ng-click="barRoute='#/bar2'">bar2</a></li>
+    </ul>
+    <iframe seamless="true" ng-src="bar.index.html{{barRoute}}"></iframe>
+</div>
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.0.6/angular.min.js"></script>
+<script>
+	angular.module('plunker', [])
+	  .controller('MainCtrl', function(){
+	  });
+</script>
+</body>
+</html>

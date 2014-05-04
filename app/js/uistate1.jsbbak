@@ -1,0 +1,53 @@
+var uistate = angular.module('uistate', ["ui.router"])
+    .config(function($stateProvider, $routeProvider){
+      
+      // For any unmatched url, send to /route1
+      //$urlRouterProvider.otherwise("/demotree/uistate1/route1")
+	  //$routeProvider.when('/route1',{templateUrl: 'partials/route1.html'})
+	  //.when('/route2',{templateUrl: 'partials/route2.html'})
+	  //.when('/route1/list',{templateUrl: 'partials/route1.list.html'})
+	  //.when('/route2/list',{templateUrl: 'partials/route2.list.html'})
+      
+      $stateProvider
+        .state('route1', {
+            url: "/demotree/uistate1/route1",
+            templateUrl: "partials/route1.html"
+			/*
+			views: {
+              // This one is targeting the ui-view="hint" within the unnamed root, aka index.html.
+              // This shows off how you could populate *any* view within *any* ancestor state.
+              'uistate@': {
+                templateUrl: "partials/route1.html"
+              },        
+            }
+			*/
+        })
+          .state('route1.list', {
+              url: "/list",
+              templateUrl: "partials/route1.list.html",
+              controller: function($scope){
+                $scope.items = ["A", "List", "Of", "Items"];
+              }
+          })
+          
+        .state('route2', {
+            url: "/route2",
+            templateUrl: "partials/route2.html"
+			/*
+			views: {
+              // This one is targeting the ui-view="hint" within the unnamed root, aka index.html.
+              // This shows off how you could populate *any* view within *any* ancestor state.
+              'uistate@': {
+                templateUrl: "partials/route2.html"
+              },        
+            }
+			*/
+        })
+          .state('route2.list', {
+              url: "/list",
+              templateUrl: "partials/route2.list.html",
+              controller: function($scope){
+                $scope.things = ["A", "Set", "Of", "Things"];
+              }
+          })
+    })
